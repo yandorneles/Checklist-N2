@@ -6,13 +6,13 @@ Para controle de suas atividades diárias, este app veio para ajudar você a nã
 
 #### Screenshots
 
-<img src="docs/Screenshots/lista_dark.jpeg" width="15%">
-<img src="docs/Screenshots/lista_light.jpeg" width="15%">
-<img src="docs/Screenshots/menu_dark.jpeg" width="15%">
-<img src="docs/Screenshots/menu_light.jpeg" width="15%">
-<img src="docs/Screenshots/sobre_dark.jpeg" width="15%">
-<img src="docs/Screenshots/cadastro_light.jpeg" width="15%">
-<img src="docs/Screenshots/cadastro_dark.jpeg" width="15%">
+<img src="docs/Screenshots/lista_dark.jpeg" width="20%" align="left">
+<img src="docs/Screenshots/lista_light.jpeg" width="20%" align="left">
+<img src="docs/Screenshots/menu_dark.jpeg" width="20%" align="left">
+<img src="docs/Screenshots/menu_light.jpeg" width="20%" align="left">
+<img src="docs/Screenshots/sobre_dark.jpeg" width="20%" align="left">
+<img src="docs/Screenshots/cadastro_light.jpeg" width="20%" align="left">
+<img src="docs/Screenshots/cadastro_dark.jpeg" width="20%">
 
 ## Avaliação
 

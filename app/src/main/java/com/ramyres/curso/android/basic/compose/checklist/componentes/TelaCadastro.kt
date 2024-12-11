@@ -39,7 +39,7 @@ fun Cadastro(modifier: Modifier = Modifier, lista: List<ChecklistItem>, onGravar
                 onValueChange = {it -> descricao = it},
                 modifier
                     .fillMaxWidth()
-                    .height(250.dp)
+                    .height(350.dp)
             )
         }
         Row (
@@ -51,8 +51,9 @@ fun Cadastro(modifier: Modifier = Modifier, lista: List<ChecklistItem>, onGravar
                     val novo_item = ChecklistItem(maxId+1, descricao)
                     onGravar(novo_item)
                 },
+                modifier = Modifier.fillMaxWidth()
             ) {
-                Text(text = "Adconar",
+                Text(text = "Adicionar",
                     fontSize = 18.sp,
                     modifier = modifier.padding(15.dp)
                 )

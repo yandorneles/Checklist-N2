@@ -69,7 +69,7 @@ fun App(modifier: Modifier = Modifier) {
     val scope = rememberCoroutineScope()
 
     // Estados da Aplicação
-    var tela: Int by rememberSaveable { mutableStateOf(0) }
+    var tela: String by rememberSaveable { mutableStateOf("LISTA") }
     var filtroDeTarefas: String by rememberSaveable { mutableStateOf("") }
     var itemSelecionado by remember { mutableStateOf<ChecklistItem?>(null) }
     var abrirDialogExclusao by remember { mutableStateOf(false) }
@@ -119,7 +119,7 @@ fun App(modifier: Modifier = Modifier) {
     }
 
     fun adicionarItem(){
-        tela = 2
+        tela = "CADASTRO"
     }
 
     // Dialogo de Exclusão
@@ -159,7 +159,7 @@ fun App(modifier: Modifier = Modifier) {
                     label = { Text(text = "Todas as Tarefas") },
                     selected = (filtroDeTarefas == ""),
                     onClick = {
-                        tela = 0
+                        tela = "LISTA"
                         filtroDeTarefas = ""
                         showOrHideMenu()
                     }
@@ -168,7 +168,7 @@ fun App(modifier: Modifier = Modifier) {
                     label = { Text(text = "Tarefas Abertas") },
                     selected = (filtroDeTarefas == "A"),
                     onClick = {
-                        tela = 0
+                        tela = "LISTA"
                         filtroDeTarefas = "A"
                         showOrHideMenu()
                     }
@@ -177,7 +177,7 @@ fun App(modifier: Modifier = Modifier) {
                     label = { Text(text = "Tarefas Concluídas") },
                     selected = (filtroDeTarefas == "C"),
                     onClick = {
-                        tela = 0
+                        tela = "LISTA"
                         filtroDeTarefas = "C"
                         showOrHideMenu()
                     }
@@ -186,7 +186,7 @@ fun App(modifier: Modifier = Modifier) {
                     label = { Text(text = "Sobre o App") },
                     selected = filtroDeTarefas == "S",
                     onClick = {
-                        tela = 1
+                        tela = "SOBRE"
                         filtroDeTarefas = "S"
                         showOrHideMenu()
                     }
@@ -204,15 +204,16 @@ fun App(modifier: Modifier = Modifier) {
                     .padding(innerPadding)
                     .fillMaxWidth()
             ) {
+
                 when (tela) {
-                    0 -> Lista(
+                    "LISTA" -> Lista(
                         lista = checklist.value.items.filter { it -> if (filtroDeTarefas == "") true else if (filtroDeTarefas == "C") it.concluido else !it.concluido },
                         onClickItem = { item -> checkOrUncheck(item) },
                         onPressItem = { item ->  excluirItem(item)})
-                    1 -> Sobre(){}
-                    2 -> Cadastro(lista = checklist.value.items) {item ->
+                    "SOBRE" -> Sobre(){}
+                    "CADASTRO" -> Cadastro(lista = checklist.value.items) {item ->
                         incluirItem(item)
-                        tela = 0
+                        tela = "LISTA"
                         filtroDeTarefas = "A"
                     }
                 }

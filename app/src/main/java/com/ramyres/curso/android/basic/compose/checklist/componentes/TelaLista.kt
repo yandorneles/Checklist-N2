@@ -66,8 +66,9 @@ fun ListaItem(
                 modifier
                     .padding(5.dp)
                     .fillMaxWidth(0.7f))
-            Checkbox(checked = item.concluido, onCheckedChange = {
-
+            Checkbox(
+                checked = item.concluido,
+                onCheckedChange = { onClick(item)
             })
         }
     }

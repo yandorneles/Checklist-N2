@@ -153,7 +153,7 @@ fun App(modifier: Modifier = Modifier) {
         drawerState = drawerState,
         drawerContent = {
             ModalDrawerSheet {
-                Text(stringResource(R.string.app_title), modifier = Modifier.padding(16.dp))
+                Text("Lista de tarefas", modifier = Modifier.padding(16.dp))
                 Divider()
                 NavigationDrawerItem(
                     label = { Text(text = "Todas as Tarefas") },

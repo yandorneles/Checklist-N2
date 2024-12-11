@@ -33,7 +33,7 @@ fun Cabecalho(
             titleContentColor = MaterialTheme.colorScheme.primary,
         ),
         title = {
-            Text(stringResource(R.string.app_title))
+            Text("Lista de tarefas")
         },
         navigationIcon = {
             IconButton(onClick = onClickMenu) {
